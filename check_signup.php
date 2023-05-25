@@ -19,6 +19,6 @@ if ($signup_id == "" ||  $signup_pass == "") {
 else {
    mysqli_query($conn, $sql);
    echo '<script>alert("회원 가입이 완료되었습니다.");</script>';
-   echo "<script>location.replace('login.php');</script>";
+   echo "<script>location.replace('login.html');</script>";
 }
 ?>

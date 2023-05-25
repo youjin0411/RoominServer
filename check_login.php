@@ -32,7 +32,7 @@
       //결과가 존재하지 않으면 로그인 실패
       if($row == null){
          echo "<script>alert('Invalid username or password')</script>";
-         echo "<script>location.replace('login.php');</script>";
+         echo "<script>location.replace('login.html');</script>";
          exit;
       }
       ?>
