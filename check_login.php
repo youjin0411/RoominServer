@@ -8,9 +8,9 @@
    <?php
    session_start();
    $host = 'localhost';
-   $user = '';
-   $pw = '';
-   $db_name = '';
+   $user = 'root';
+   $pw = '1234';
+   $db_name = 'test';
       $mysqli = new mysqli($host, $user, $pw, $db_name); //db 연결
       
       //login.php에서 입력받은 id, password
