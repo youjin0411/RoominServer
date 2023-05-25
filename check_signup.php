@@ -5,13 +5,14 @@ session_start();
 $host = 'localhost';
 $user = 'root';
 $pw = '1234';
-$db_name = 'test';
+$db_name = 'hotel';
 $conn = mysqli_connect($host, $user, $pw, $db_name);
 $signup_id = $_POST['id'];
 $signup_pass = $_POST['pw'];
-$sql = "INSERT INTO member VALUES ('$signup_id', '$signup_pass')";
+$signup_hotelname = $_POST['hotelname'];
+$sql = "INSERT INTO hotellogin VALUES ('$signup_hotelname', '$signup_id', '$signup_pass')";
 
-if ($signup_id == "" ||  $signup_pass == "") {
+if ($signup_id == "" ||  $signup_pass == "" || $signup_hotelname == "") {
    echo '<script>alert("비어있는 항목이 있습니다.");</script>';
    echo '<script>history.back();</script>';
 }

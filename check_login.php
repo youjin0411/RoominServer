@@ -10,14 +10,14 @@
    $host = 'localhost';
    $user = 'root';
    $pw = '1234';
-   $db_name = 'test';
+   $db_name = 'hotel';
       $mysqli = new mysqli($host, $user, $pw, $db_name); //db 연결
       
       //login.php에서 입력받은 id, password
       $username = $_POST['id'];
       $userpass = $_POST['pw'];
       
-      $q = "SELECT * FROM member WHERE id = '$username' AND pass = '$userpass'";
+      $q = "SELECT * FROM hotellogin WHERE name = '$username' AND password = '$userpass'";
       $result = $mysqli->query($q);
       $row = $result->fetch_array(MYSQLI_ASSOC);
       
